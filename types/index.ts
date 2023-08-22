@@ -2,6 +2,10 @@ import { MouseEventHandler } from 'react';
 
 export interface addTodo {
   title: string;
-  handleClick?: MouseEventHandler<HTMLButtonElement>;
+  handleClick?: string;
   buttonstyle: string;
+}
+
+export interface makeTodo {
+  inputresult?: string;
 }
