@@ -21,7 +21,7 @@ const InputTodo = ({ inputresult }: makeTodo) => {
       <form
         id="form"
         action=""
-        className="flex flex-col gap-5 mx-auto max-w-xl bg-slate-700"
+        className="flex flex-col gap-5 mx-auto max-w-xl "
       >
         <input
           type="text"
@@ -38,11 +38,19 @@ const InputTodo = ({ inputresult }: makeTodo) => {
         </button>
       </form>
       <div>
-        {todos.map((todo, index) => (
-          <div key={index}>
-            <h3>{todo}</h3>
-          </div>
-        ))}
+        <ul>
+          {todos.map((todo, index) => (
+            <div key={index}>
+              {/* <h3 className=" text-gray-100 mt-15 ml-10 text-xl font-semibold">
+              {todo}
+            </h3> */}
+
+              <li className=" text-gray-100 mt-15 ml-5 text-xl font-semibold">
+                {todo}
+              </li>
+            </div>
+          ))}
+        </ul>
       </div>
     </div>
   );
